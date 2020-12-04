@@ -1,1 +1,12 @@
-Welcome to the keymaster wiki!
+# keymaster
+Home Assistant keymaster integration for Z-Wave enabled locks. This integration allows you to control one (or more) Z-Wave enabled locks that have been added to your Z-Wave network. Besides being able to control your lock with lock/unlock commands, you can also control who may lock/unlock the device using the lock's front facing keypad. With the integration you may create multiple users or slots and each slot (the number depends upon the lock model) has its own PIN code.
+
+Setting up a lock for the entire family can be accomplished in a matter of seconds. Did you just leave town and forgot to turn the stove off? through the Home Assistant interface you can create a new PIN instantly and give it to a neighbor and delete it later. Do you have house cleaners that come at specifc times? With the advanced PIN settings you can create a slot that only unlocks on specific date and time ranges. You may also create slots that allow a number of entries, after which the lock won't respond to the PIN.
+
+## Selecting a Z-Wave Network
+
+Currently, the default installation of Home Assitant uses the aptly named [zwave](https://www.home-assistant.io/integrations/zwave/) integration.  This integration is eventually going to be replaced by the OpenZWave Network, or simply [ozw](https://www.home-assistant.io/integrations/ozw/).
+
+Before you install keymaster, you should consider which Zwave Network you want to use, zwave or ozw.  We **strongly** suggest using ozw because it has more reliable communications with the locks we have tested.  While the zwave network works, we have had to add various hacks and workarounds for some of the locks, particularly some of the older ones.  We have had far fewer issues with the ozw network. The ozw network will soon be the default zwave network for Home Assistant, so there is very little worry about switching now.
+
+The only issue using ozw presents is you have to uninstall or disable your zwave network, and install ozw.  Depending on the type of your home assistant installation, this may be as easy as using the [add-on store](https://www.home-assistant.io/addons/).  Or if you use docker, there is a [container for ozw](https://github.com/OpenZWave/qt-openzwave). Please review the [ozw beta installation support thread](https://community.home-assistant.io/t/get-openzwave-beta-working/200121) to get started.
