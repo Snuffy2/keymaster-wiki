@@ -4,7 +4,7 @@
  [Pre-Installation-Steps-(IMPORTANT)](Pre-Installation-Steps-(IMPORTANT))
 
 <!---
- [Installation](https://github.com/FutureTense/keymaster/wiki/Install-the-keymaster-integration)
+ [Installation](https://github.com/FutureTense/keymaster/wiki/Install-the-integration)
 --->
  [Installing the integration](Install-the-keymaster-integration)
 
