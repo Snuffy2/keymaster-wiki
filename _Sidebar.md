@@ -6,7 +6,7 @@
 <!---
  [Installation](https://github.com/FutureTense/keymaster/wiki/Install-the-integration)
 --->
- [Installing the integration](Install-the-keymaster-integration)
+ [Installing the integration](Install-the-integration)
 
  [Lovelace-View](Lovelace-View)
 
