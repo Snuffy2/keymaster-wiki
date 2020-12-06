@@ -11,7 +11,7 @@ You need to create an integration for each lock you want to control.  Select Con
 ***
 ## What you'll see
 
-<img src="https://github.com/FutureTense/keymaster/raw/master/docs/integration_screen_wiki.png" alt="Integration Screen" />
+<img src="https://github.com/FutureTense/keymaster/raw/main/docs/integration_screen_wiki.png" alt="Integration Screen" />
 
 #### 1.  **Z-wave lock**
     
