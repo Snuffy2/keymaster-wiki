@@ -4,7 +4,11 @@ This integration can be installed manually, but the *supported* method requires 
 
 Open HACS and select the Integrations tab.  Click the + icon at the bottom right and search for `keymaster`.  You will then get a message that the integration requires Home Assistant to be restarted.  Please do so.
 
-You need to create an integration for each lock you want to control.  Select Configuration | Integrations.  Click the + icon at the bottom right and search for **keymaster** and select it.  The integration UI will prompt you for several values.  Below we are using the default entity names that are created for a Schlage BE469 lock.
+You need to create an integration for each lock you want to control.  Select Configuration | Integrations.  Click the + icon at the bottom right and search for **keymaster** and select it.
+
+If the integration **_does not_** show up when searching, press `F5` from the integration screen to refresh the list of integrations. 
+
+The integration UI will prompt you for several values.  Below we are using the default entity names that are created for a Schlage BE469 lock.
 
 **Note:** Renaming your entities is _**not required**_, but it's _recommended_ to amend the door name to the end of your entities for your sanity, example: `sensor.be469zp_connect_smart_deadbolt_user_code_backdoor`
 
