@@ -15,6 +15,9 @@ Before your lock will respond to automations, you will need to create `input_boo
 
 We have found the best way to add these entities and associated automations is to create a new directory in your `packages` directory called `additional_yaml` and add one of the following files from the repository into this directory, choosing the file matching your Z-Wave Network.
 
+## Z-Wave JS Package File:
+[assets/additional_yaml/zwave_js.yaml](https://github.com/FutureTense/keymaster/blob/master/assets/additional_yaml/zwave_js.yaml)
+
 ## OZW Package File:
 
 [assets/additional_yaml/ozw.yaml](https://github.com/FutureTense/keymaster/blob/master/assets/additional_yaml/ozw.yaml)
