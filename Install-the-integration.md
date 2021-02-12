@@ -20,6 +20,7 @@ The integration UI will prompt you for several values.  Below we are using the d
 #### 1.  **Z-wave lock**
     
 Use the dropdown and select your Z-Wave lock.  The default for Schlage looks like `lock.be469zp_connect_smart_deadbolt_locked`, this drop down will only show available lock devices.
+
 #### 2.  **Code slots**
 
 The number of code slots or PINS you want to manage.  The maxinum number is depedant upon your lock.  Don't create more slots than you will actually need, because too many can slow your lovelace UI down.
@@ -27,20 +28,45 @@ The number of code slots or PINS you want to manage.  The maxinum number is depe
 #### 3. **Start from code slot #** 
 
 Unless you are using an `ID Brand` lock or a lock where the user codes do not start at slot 1, leave this as the default `1`, otherwise `ID Brand` locks start at around user code 50 due to RFID/Bluetooth/etc codes.
+
 #### 4.  **Lock Name**
+
 Give your lock a name that will be used in notifications, e.g. *frontdoor*
+
 #### 5.  **Door Sensor**
 
 If your lock has a sensor that determines if the door is opened/closed, select it here.  The Schlage doesn't have one but you can use a third party sensor or specify any sensor here.
+
 #### 6.  **User Code Sensor**
 
 This sensor returns the slot number for a user that just entered their lock PIN.  Schlage value: `sensor.be469zp_connect_smart_deadbolt_user_code`
+
 #### 7.  **Access Control Sensor**
 
 This sensor returns the command number just executed by the lock.  Schlage value: `sensor.be469zp_connect_smart_deadbolt_access_control`    
+
 #### 8.  **Path to packages directory**
 
-The default `/config/packages/keymaster` should suffice.
-#### 9.  **OpenZwave support**
+The default `packages/keymaster` should suffice.
 
-If you are using the OpenZwave (`ozw`) implemtation, make sure you check this box.  For the native `zwave`, leave this unchecked.
+#### 9. **Path to child locks file**
+
+If you're using child locks specify the path to the configuration for those files here. Use the following format for your file:
+```yaml
+# `ozw` and `zwave` will use one of the two pairs of sensor formats depending on how old your lock is (look at the last two entity_id's of lock_name_1 and lock_name_2)
+lock_name_1:
+    lock_entity_id: lock.entity_id_for_your_lock
+    alarm_level_or_user_code_entity_id: sensor.lock_alarm_level
+    alarm_type_or_access_control_entity_id: sensor.lock_alarm_type
+
+lock_name_2:
+    lock_entity_id: lock.entity_id_for_your_lock
+    alarm_level_or_user_code_entity_id: sensor.lock_user_code
+    alarm_type_or_access_control_entity_id: sensor.lock_access_control
+
+# zwave_js uses this format for alarm level and alarm type. Your lock may not have these sensors, in which case lock/unlock notifications come in via events which keymaster will automatically detect
+lock_name_3:
+    lock_entity_id: lock.entity_id_for_your_lock
+    alarm_level_or_user_code_entity_id: sensor.lock_alarmlevel
+    alarm_type_or_access_control_entity_id: sensor.lock_alarmtype
+```
