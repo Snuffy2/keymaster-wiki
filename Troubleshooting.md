@@ -1,7 +1,7 @@
 # Troubleshooting
 
 ## Missing Sensors
-If you are not seeing your `User Code`, `Access Control`, `Alarm Type`, or `Alarm Level`, please note in `ozw` they are disabled by default as the preferred method is to use the `Home Security` sensor. Enabling these sensors does not break anything and allows the automations to accurately process the lock information.
+If you are not seeing your `User Code`, `Access Control`, `Alarm Type`, or `Alarm Level`, please note in `ozw` and `zwave_js` they are disabled by default as the preferred method is to use the `Home Security` sensor. Enabling these sensors does not break anything and allows the automations to accurately process the lock information. If you can't find these sensors (enabled or disabled) and you are using the `zwave_js` integration, your lock notifications may be coming in as events and you can use `sensor.fake` when setting these sensor values during set up.
 
 ## Code Slots
 The code slots are updated every 5 seconds internally in Home Assistant, this method does not poll the lock and wake it up resulting in battery drain.
