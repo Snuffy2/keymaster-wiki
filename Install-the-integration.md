@@ -53,7 +53,9 @@ The default `packages/keymaster` should suffice.
 
 If you're using child locks specify the path to the configuration for those files here. Use the following format for your file:
 ```yaml
-# `ozw` and `zwave` will use one of the two pairs of sensor formats depending on how old your lock is (look at the last two entity_id's of lock_name_1 and lock_name_2)
+# `ozw` and `zwave` will use one of the two pairs of sensor formats
+# depending on how old your lock is (look at the last two entity_id's
+# of lock_name_1 and lock_name_2)
 lock_name_1:
     lock_entity_id: lock.entity_id_for_your_lock
     alarm_level_or_user_code_entity_id: sensor.lock_alarm_level
@@ -64,7 +66,10 @@ lock_name_2:
     alarm_level_or_user_code_entity_id: sensor.lock_user_code
     alarm_type_or_access_control_entity_id: sensor.lock_access_control
 
-# zwave_js uses this format for alarm level and alarm type. Your lock may not have these sensors, in which case lock/unlock notifications come in via events which keymaster will automatically detect
+# zwave_js uses this format for alarm level and alarm type. Your lock may
+# not have these sensors, in which case lock/unlock notifications come in
+# via events (the event is specifically called `zwave_js_event`) which
+# keymaster will automatically detect
 lock_name_3:
     lock_entity_id: lock.entity_id_for_your_lock
     alarm_level_or_user_code_entity_id: sensor.lock_alarmlevel
