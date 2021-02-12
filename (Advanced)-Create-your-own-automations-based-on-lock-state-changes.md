@@ -3,6 +3,7 @@ Are you interested in creating automations when your lock state changes from loc
 ```json
 {
   "lockname": "frontdoor",
+  "entity_id": "lock.front_door_lock",
   "state": "locked",
   "action_text": "Keypad Lock",
   "code_slot": 1,
