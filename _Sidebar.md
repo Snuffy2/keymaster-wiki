@@ -16,4 +16,4 @@
 
  [Usage](Usage)
 
- [(Advanced) Create your own automations based on lock state changes](Advanced-Create-your-own-automations-based-on-lock-state-changes)
+ [(Advanced) Create your own automations based on lock state changes]((Advanced)-Create-your-own-automations-based-on-lock-state-changes)
