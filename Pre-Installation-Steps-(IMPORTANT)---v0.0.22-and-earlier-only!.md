@@ -1,3 +1,5 @@
+> NOTE: These steps are only needed for v0.0.22 and earlier. If you are on a later version, you can skip these steps
+
 ## Before installing
 
 You will need to add to your `configuration.yaml` the following lines (if you have this already you can skip this step):
