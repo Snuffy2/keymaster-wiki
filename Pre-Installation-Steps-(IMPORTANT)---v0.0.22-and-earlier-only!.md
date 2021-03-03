@@ -1,4 +1,7 @@
-> NOTE: These steps are only needed for v0.0.22 and earlier. If you are on a later version, you can skip these steps
+**NOTE: These steps are only needed for v0.0.22 and earlier. If you are on a later version, you can skip these steps**
+
+***
+
 
 ## Before installing
 
