@@ -1,6 +1,6 @@
 ## Install keymaster via HACS
 
-This integration can be installed manually, but the *supported* method requires you to use The [Home Assistant Community Store](https://community.home-assistant.io/t/custom-component-hacs/121727).  If you dont't already have HACS, it is [simple to install](https://hacs.xyz/docs/installation/prerequisites).
+This integration can be added to your installation manually, but the *supported* method requires you to use The [Home Assistant Community Store](https://community.home-assistant.io/t/custom-component-hacs/121727).  If you dont't already have HACS, it is [simple to install](https://hacs.xyz/docs/installation/prerequisites).
 
 Open HACS and select the Integrations tab.  Click the + icon at the bottom right and search for `keymaster`.  You will then get a message that the integration requires Home Assistant to be restarted.  Please do so.
 
