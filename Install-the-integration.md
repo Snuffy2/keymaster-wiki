@@ -17,6 +17,10 @@ The integration UI will prompt you for several values.  Below we are using the d
 
 <img src="https://github.com/FutureTense/keymaster/raw/main/docs/integration_screen_wiki.png" alt="Integration Screen" />
 
+#### 0.  **Parent lock**
+
+Use this to make this lock a `child` of the specified `parent` lock.  This will copy all of the names/PIN/settings from the parent to this lock.  Any changes made to the parent lock will happen on this lock allowing you to manage multiple locks from one location. 
+
 #### 1.  **Z-wave lock**
     
 Use the dropdown and select your Z-Wave lock.  The default for Schlage looks like `lock.be469zp_connect_smart_deadbolt_locked`, this drop down will only show available lock devices.
