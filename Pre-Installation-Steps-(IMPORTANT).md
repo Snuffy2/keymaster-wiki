@@ -11,7 +11,7 @@ You will also need to create the `packages` directory in your Home Assistant con
 
 ***
 
-## **NOTE: These steps are only needed for v0.0.22 and earlier. If you are on a later version, you can skip these steps**
+## **NOTE: These steps below are only needed for v0.0.22 and earlier. If you are on a later version, you can skip these steps**
 
 ***
 
