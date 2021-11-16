@@ -7,7 +7,7 @@ If you are not seeing your `User Code`, `Access Control`, `Alarm Type`, or `Alar
 The code slots are updated every 5 seconds internally in Home Assistant, this method does not poll the lock and wake it up resulting in battery drain.
 
 ## Unable to set codes
-This usually occurs due to the ZWave network not being detected. This can happen at startup but it should resolve itself, if it does not, please [enable debugging](https://github.com/FutureTense/keymaster/wiki/Troubleshooting/#enable-debugging) and create a bug report.
+This usually occurs due to the ZWave network not being detected. This can happen at startup but it should resolve itself, if it does not, please [enable debugging](https://github.com/FutureTense/keymaster/wiki/Troubleshooting#enable-debugging) and create a bug report.
 
 ## Entity not available messages
 This usually occurs when you haven't added the `packages` configuration to your `configuration.yaml` file. Please [**see the pre-install instructions**](https://github.com/FutureTense/keymaster/wiki/Pre-Installation-Steps-(IMPORTANT)) on how to do that.
