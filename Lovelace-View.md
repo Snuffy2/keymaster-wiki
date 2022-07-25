@@ -4,7 +4,7 @@ If all goes well, you will also see a new directory (by default `<your config di
 
 > (Open file) Ctrl-A (select all) Ctrl-C (copy)
 
-Open Home Assistant and open the LoveLace editor by clicking the elipses on the top right of the screen, and then select "Configure UI". Click the elipses again and click "Raw config editor". Scroll down to the bottom of the screen and then paste your clipboard. This will paste a new View for your lock. Click the Save button then click the X to exit.
+Open Home Assistant and open the LoveLace editor by clicking the ellipses on the top right of the screen, and then select "Configure UI" or "Edit Dashboard". Click the ellipses again and click "Raw config editor". Scroll down to the bottom of the screen and then paste your clipboard. This will paste a new View for your lock. Click the Save button then click the X to exit.
 
 In order for the lovelace ui to work properly you will need to install the following modules.
 1. [lovelace-auto-entities](https://github.com/thomasloven/lovelace-auto-entities)
