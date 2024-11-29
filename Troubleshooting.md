@@ -1,16 +1,13 @@
 # Troubleshooting
 
 ## Missing Sensors
-If you are not seeing your `User Code`, `Access Control`, `Alarm Type`, or `Alarm Level`, please note in `ozw` and `zwave_js` they are disabled by default as the preferred method is to use the `Home Security` sensor. Enabling these sensors does not break anything and allows the automations to accurately process the lock information. If you can't find these sensors (enabled or disabled) and you are using the `zwave_js` integration, your lock notifications may be coming in as events and you can use `sensor.fake` when setting these sensor values during set up.
+If you are not seeing your `User Code`, `Access Control`, `Alarm Type`, or `Alarm Level`, please note in `zwave_js` they are disabled by default as the preferred method is to use the `Home Security` sensor. Enabling these sensors does not break anything and allows the automations to accurately process the lock information. If you can't find these sensors (enabled or disabled) and you are using the `zwave_js` integration, your lock notifications may be coming in as events and you can use `sensor.fake` when setting these sensor values during set up.
 
 ## Code Slots
-The code slots are updated every 5 seconds internally in Home Assistant, this method does not poll the lock and wake it up resulting in battery drain.
+The code slots are regularly updated in Home Assistant, this method does not poll the lock and wake it up resulting in battery drain.
 
 ## Unable to set codes
-This usually occurs due to the ZWave network not being detected. This can happen at startup but it should resolve itself, if it does not, please [enable debugging](https://github.com/FutureTense/keymaster/wiki/Troubleshooting#enable-debugging) and create a bug report.
-
-## Entity not available messages
-This usually occurs when you haven't added the `packages` configuration to your `configuration.yaml` file. Please [**see the pre-install instructions**](https://github.com/FutureTense/keymaster/wiki/Pre-Installation-Steps-(IMPORTANT)) on how to do that.
+This usually occurs due to the Z-Wave network not being detected. This can happen at startup but it should resolve itself, if it does not, please [enable debugging](https://github.com/FutureTense/keymaster/wiki/Troubleshooting#enable-debugging) and create a bug report.
 
 ## Enable Debugging
 This will be needed from time to time to get more data to find out what's going on. Navigate to `Dev-tools` -> `Services` tab in Home Assistant.

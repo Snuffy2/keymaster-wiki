@@ -12,7 +12,7 @@ The application makes heavy usage of `binary_sensor`. Each code slot in the syst
 - Friday
 - Saturday
 
-**Enabled** This sensor is turned on and off by using the `Enabled` toggle in the UI. Anytime you modify the text of a PIN, this boolean toggle is turned off and must be manually turned on again to "activate" the PIN. By default, all of a slot's other UI elements are in the "always on" setting, so if you enable this boolean the PIN will be automatically added to the lock and remain that way until you turn the turn the toggle on again.
+**Enabled** This sensor is turned on and off by using the `Enabled` toggle in the UI. By default, all of a slot's other UI elements are in the on setting, so if you enable this boolean the PIN will be automatically added to the lock and remain that way until you turn the turn the toggle on again.
 
 **Access Count** This sensor is controlled by the `Limit Access Count` toggle and the `Access Count` slider. If the toggle is turned on _and_ the value of the Access Count slider is greater than zero, this sensor will report true. Anytime this code slot is used to open a lock, the Access Count slider will be decremented by one. When the Access Count hits zero, this sensor is disabled and the PIN will be removed from the lock and will remain that way until you increase the Access Count slider or turn off the toggle.
 
@@ -21,11 +21,12 @@ The application makes heavy usage of `binary_sensor`. Each code slot in the syst
 **Sunday - Saturday** These sensors are enabled by default. If you disable any of them, then the PIN won't work on that day. When enabled, the PIN will only work if the current system time falls between the specified time periods. If the periods are equal, then the PIN will work for the entire day.
 
 ### PIN Status
-This sensor will show you the status as decribed below of the state of the PIN in regards to the lock and Home Assistant.
+This sensor will show you the status as described below of the state of the PIN in regards to the lock and Home Assistant.
 
 Status|Meaning
 ---|---
-Connecting|PIN is trying to be added to the lock
-Connected|PIN has been added to the lock and confirmed
-Disconnecting|Code slot is trying to be cleared
-Disconnected|Code slot has been cleared and confirmed
+Adding|PIN is trying to be added to the lock
+Deleting|PIN is trying to be cleared
+Disconnected|PIN has been cleared and confirmed
+Out of Sync|PIN is out of sync with the lock and will automatically try to resolve
+Synced|PIN has been added to the lock and confirmed
